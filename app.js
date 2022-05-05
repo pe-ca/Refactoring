@@ -1,5 +1,5 @@
 const reader = require("./lib/utils/Reader")
-const explorer = require("./lib/explorer/explorers")
+const explorer = require("./lib/services/ExplorerService")
 
 // Get the quantity of explorers names in node
 console.log(explorer.numberOfExplorersInMission(reader.readJsonFile("./data/explorers.json"), "node"))
