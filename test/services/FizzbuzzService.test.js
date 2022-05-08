@@ -53,9 +53,27 @@ describe("Fizzbuzz Service", () =>{
         expect(result).toBe("function");
     });
 
-    test("Comparacion json de respuesta", ()=>{
-        const response = {score: 1, trick: 1} 
+    test("Comparacion objeto de respuesta score 1", ()=>{
+        const response = {score: 1, trick: 1}; 
         const result = fbs.applyValidationInNumber(1);
+        expect(result).toEqual(response);
+    });
+
+    test("Comparacion objeto de respuesta score 3", ()=>{
+        const response = {score: 3, trick: "Fizz"}; 
+        const result = fbs.applyValidationInNumber(3);
+        expect(result).toEqual(response);
+    });
+
+    test("Comparacion objeto de respuesta score 5", ()=>{
+        const response = {score: 5, trick: "Buzz"}; 
+        const result = fbs.applyValidationInNumber(5);
+        expect(result).toEqual(response);
+    });
+
+    test("Comparacion objeto de respuesta score 15", ()=>{
+        const response = {score: 15, trick: "FizzBuzz"}; 
+        const result = fbs.applyValidationInNumber(15);
         expect(result).toEqual(response);
     });
 });
