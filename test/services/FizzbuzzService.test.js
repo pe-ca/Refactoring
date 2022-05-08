@@ -6,9 +6,15 @@ describe("Fizzbuzz Service", () =>{
         expect(result).toBe("function")
     })
 
-    test("Caso Fizz", ()=>{
+    test("Caso objeto sin propiedad score", ()=>{
+        const expl ={name: "Explorer1"}
+        result = fbs.applyValidationInExplorer(expl)
+        expect(result).toBeUndefined()
+    })
+
+    test("Caso objeto sin propied trick", ()=>{
         const expl ={name: "Explorer1", score: 1}
         result = fbs.applyValidationInExplorer(expl)
-        expect(result.trick).toBe(1)
+        expect(result.hasOwnProperty("trick")).toBe(true)
     })
 })
