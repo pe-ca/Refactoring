@@ -47,4 +47,15 @@ describe("Fizzbuzz Service", () =>{
         const result = fbs.applyValidationInExplorer(expl);
         expect(result.trick).toBe("FizzBuzz");
     });
+
+    test("Existe el metodo applyValidationInNumber", ()=>{
+        const result = typeof fbs.applyValidationInNumber;
+        expect(result).toBe("function");
+    });
+
+    test("Comparacion json de respuesta", ()=>{
+        const response = {score: 1, trick: 1} 
+        const result = fbs.applyValidationInNumber(1);
+        expect(result).toEqual(response);
+    });
 });
