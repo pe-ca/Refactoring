@@ -29,4 +29,16 @@ describe("Fizzbuzz Service", () =>{
         result = fbs.applyValidationInExplorer(expl)
         expect(result.trick).toBe("Fizz")
     })
+
+    test("Caso score no divisible entre 5", ()=>{
+        const expl ={name: "Explorer4", score: 4}
+        result = fbs.applyValidationInExplorer(expl)
+        expect(result.trick).toBe(4)
+    })
+
+    test("Caso score divisible entre 5", ()=>{
+        const expl ={name: "Explorer5", score: 5}
+        result = fbs.applyValidationInExplorer(expl)
+        expect(result.trick).toBe("Buzz")
+    })
 })
