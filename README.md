@@ -16,3 +16,4 @@ Practica 1, 2, 3 de semana 4 LaunchX, se ven temas de refactorizacion de coodigo
 |`/v1/explorers/:mission`|`:mission` node o java|Lista de explorers en la misión que enviaste (node o java)|
 |`/v1/explorers/amount/:mission`|`:mission` node o java|Cantidad de explorers según la misión que enviaste (node o java)|
 |`/v1/explorers/usernames/:mission`|`:mission` node o java|Lista de usernames en la misión que enviaste (node o java)|
+|`/v1/fizzbuzz/:score`|`:score` cualquier número|Score%3 = `Fizz`,Score%5 = `Buzz`,Score%3 && Score%5= `FizzBuzz`, cualquier otro score = score|
