@@ -18,3 +18,28 @@ describe("Explorers explorersUsernameInMission", () =>{
         expect(result).not.toBeUndefined();
     });
 });
+
+describe("Listas de explorers filtrados por stack", () =>{
+    test("Comprueba existencia del metodo", () =>{
+        const result = typeof expl.filterByStack;
+        expect(result).toBe("function");
+    });
+
+    test("Sin formato minimo del objeto a filtrar", () =>{
+        const result = expl.filterByStack(null, null);
+        expect(result).toBeUndefined();
+    });
+
+    test("Formato minimo del objeto a filtrar", () =>{
+        const data = reader.readJsonFile(("./test/data/explorer1.json"));
+        const result = expl.filterByStack(data, "javascripts");
+        expect(result).not.toBeUndefined();
+    });
+
+    test("Respuesta correcta", () =>{
+        const response = ["Woopa1"];
+        const data = reader.readJsonFile(("./test/data/explorer1.json"));
+        const result = expl.filterByStack(data, "javascripts");
+        expect(result).toEqual(response);
+    });
+});
