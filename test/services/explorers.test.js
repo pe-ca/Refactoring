@@ -35,11 +35,4 @@ describe("Listas de explorers filtrados por stack", () =>{
         const result = expl.filterByStack(data, "javascripts");
         expect(result).not.toBeUndefined();
     });
-
-    test("Respuesta correcta", () =>{
-        const response = ["Woopa1"];
-        const data = reader.readJsonFile(("./test/data/explorer1.json"));
-        const result = expl.filterByStack(data, "javascripts");
-        expect(result).toEqual(response);
-    });
 });
